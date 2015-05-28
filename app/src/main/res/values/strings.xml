@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">FavoriteScripture</string>
+    <string name="app_name">Favorite Scripture App</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="book">Ether</string>
     <string name="action_settings">Settings</string>
+    <string name="chapter">4</string>
+    <string name="verse">11-12</string>
+    <string name="book_label">Book:</string>
+    <string name="chapter_label">Chapter:</string>
+    <string name="verse_label">Verse(s):</string>
+    <string name="share">Share</string>
 </resources>
