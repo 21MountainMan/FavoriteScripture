@@ -1,10 +1,13 @@
 package com.example.johnathon.favoritescripture;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,6 +18,26 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Button shareButton = (Button)findViewById(R.id.shareButton);
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ShareActivity.class);
+
+                // get all the text from the user
+                EditText bookEditText    = (EditText)findViewById(R.id.bookEditText);
+                EditText chapterEditText = (EditText)findViewById(R.id.chapterEditText);
+                EditText verseEditText   = (EditText)findViewById(R.id.verseEditText);
+
+                // include all the data that the ShareActivity will need
+                intent.putExtra("book", bookEditText.getText().toString());
+                intent.putExtra("chapter", chapterEditText.getText().toString());
+                intent.putExtra("verse", verseEditText.getText().toString());
+
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

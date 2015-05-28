@@ -56,7 +56,8 @@
         android:text="@string/chapter"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:numeric="integer" />
+        android:numeric="integer"
+        android:maxLength="3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,15 +72,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="number|text"
         android:ems="4"
         android:id="@+id/verseEditText"
         android:layout_below="@+id/verseLabelTextView"
         android:layout_centerHorizontal="true"
         android:text="@string/verse"
         android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:numeric="integer" />
+        android:singleLine="true" />
 
     <Button
         android:layout_width="wrap_content"
