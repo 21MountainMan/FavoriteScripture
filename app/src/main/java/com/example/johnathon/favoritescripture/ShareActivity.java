@@ -14,16 +14,18 @@ public class ShareActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
 
+        // get the book, chapter and verse into Strings
         String book    = getIntent().getStringExtra("book");
         String chapter = getIntent().getStringExtra("chapter");
         String verse   = getIntent().getStringExtra("verse");
 
+        // combine them
         String fullReference = book + " " + chapter + ":" + verse;
 
+        // put them on the screen
         TextView fullReferenceTextView = (TextView)findViewById(R.id.fullReferenceTextView);
 
         fullReferenceTextView.setText(fullReference);
-
     }
 
     @Override
