@@ -1,3 +1,10 @@
+/*
+ Collaborators:
+    Andrew Barta
+    David Lee
+    For helping with version control
+ */
+
 package com.example.johnathon.favoritescripture;
 
 import android.content.Intent;
